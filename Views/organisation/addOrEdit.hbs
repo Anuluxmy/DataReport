@@ -1,0 +1,23 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/organisation" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{organisation._id}}">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Name" value="{{organisation.name}}">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Year Founded</label>
+            <input type="text" class="form-control" name="yearFounded" placeholder="1856" value="{{organisation.yearFounded}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Revenue</label>
+            <input type="text" class="form-control" name="revenue" placeholder="1000000 USD" value="{{organisation.revenue}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/organisation/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
